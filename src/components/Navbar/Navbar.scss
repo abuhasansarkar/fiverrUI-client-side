@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #003f17;
+  color: white;
+  transition: 0.5s all ease;
+  position: sticky;
+  top: 0;
+  &.active {
+    background: white;
+    color: #404145;
+    .links span:hover{
+      color: #19a463;
+    }
+  }
+
+  .container {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    .logo {
+      .logo-text {
+        font-weight: 600;
+        font-size: 34px;
+      }
+    }
+    .links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-weight: 600;
+
+      button {
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-weight: bold;
+        &:hover {
+          background: #19a463;
+          border: 1px solid #19a463;
+        }
+      }
+
+      .user {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        position: relative;
+        a img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        
+        .options {
+          position: absolute;
+          width: 200px;
+          top: 50px;
+          right: 0;
+          background: white;
+          display: flex;
+          padding: 15px;
+          flex-direction: column;
+          border: 2px solid #dce0dd;
+          border-radius: 10px;
+          color: #404145;
+          
+          span{
+            line-height: 30px;
+            &:hover{
+              color: #19a463;
+            }
+          }
+        }
+      }
+    }
+  }
+  hr {
+    border: 1px solid #dce0dd;
+  }
+  .manu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    span {
+      color: #404145;
+      font-weight: 500;
+    }
+  }
+}
