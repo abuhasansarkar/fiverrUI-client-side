@@ -1,0 +1,78 @@
+.fiverr-business{
+     background: #0D084D;
+     padding: 100px 0;
+     color: white;
+     .container{
+          // width: 1400px;
+          // margin: auto;
+          display: flex;
+          justify-content: space-between;
+          gap: 50px;
+          align-items: center;
+
+          .left{
+               margin-left: 100px;
+
+               h4{
+                    font-size: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 50px;
+                    span{
+                         font-weight: normal;
+                    }
+                    .badge{
+                         font-weight: 600;;
+                         font-size: 14px;
+                         padding: 5px 10px;
+                         border-radius: 50px;
+                         background: #584AFF;
+                    }
+               }
+
+               h2{
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                    i{
+                       font-weight: normal;  
+                    }
+               }
+               p{
+                    margin-bottom: 20px;
+               }
+               .content{
+                    margin-bottom: 20px;
+
+                    .title{
+                         display: flex;
+                         align-items: center;
+                         gap: 10px;
+                         margin-bottom: 10px; 
+
+                         img{
+                              width: 25px;
+                              height: 25px;
+                         }
+                    }
+               }
+
+               .link button{
+                    background: #19A463;
+                    padding: 15px 30px;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-top: 50px;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                         background: white;
+                         color: #19A463;
+                    }
+               }
+          }
+     }
+}

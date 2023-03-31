@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -8,15 +8,17 @@ const Navbar = () => {
   // Stivky Navbar
   const [active, setActive] = useState(false);
   const isActive = () => {
-    window.scrollY > 10 ? setActive(true) : setActive(false);
+    window.scrollY > 0 ? setActive(true) : setActive(false);
   };
   useEffect(() => {
     window.addEventListener("scroll", isActive);
-
     return () => {
       window.removeEventListener("scroll", isActive);
     };
   }, []);
+
+  // use location and change url and path
+  const {pathname} = useLocation();
   // Active User
   const currentUser = {
     _id: 1,
@@ -25,10 +27,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className={active ? "navbar active" : "navbar"}>
+    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          <Link className="link">
+          <Link to='/' className="link">
             <span className="logo-text">
               fiverr<span className="dot">.</span>
             </span>
@@ -67,18 +69,18 @@ const Navbar = () => {
                 <div className="options">
                   {currentUser.isSeller && (
                     <>
-                      <Link className="link">
+                      <Link to='/gigs' className="link">
                         <span>Gigs</span>
                       </Link>
-                      <Link className="link">
+                      <Link to='/add' className="link">
                         <span>Add New Gig</span>
                       </Link>
                     </>
                   )}
-                  <Link className="link">
+                  <Link to='/orders' className="link">
                     <span>Orders</span>
                   </Link>
-                  <Link className="link">
+                  <Link to='/messages' className="link">
                     <span>Messages</span>
                   </Link>
                   <Link className="link">
@@ -90,7 +92,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {active && (
+      {(active || pathname !== "/") && (
         <>
           <hr />
           <div className="container">

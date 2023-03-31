@@ -1,0 +1,64 @@
+.fingertips {
+  background: #f1fdf7;
+  padding: 100px 0;
+  color: #404145;
+  .container {
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    .left {
+      .content {
+        width: 90%;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        strong {
+          font-size: 18px;
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+          background: #19a463;
+          border-radius: 50%;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .right {
+      .video-sec {
+        position: relative;
+      }
+
+      .play-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100px;
+        background: white;
+        border-radius: 50%;
+        
+      }
+    }
+  }
+}

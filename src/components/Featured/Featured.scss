@@ -1,0 +1,89 @@
+.featured{
+     background: #003f17;
+     color: white;
+     .container{
+          width: 1400px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .left{
+               
+               h1{
+                   
+                    font-size: 44px;
+                    margin-bottom: 20px;
+                    i{
+                         font-weight: normal;
+                    }
+               }
+               .search{
+                    display: flex;
+                    align-items: center;
+                    background: white;
+                    justify-content: space-between;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+                    img{
+                         width: 20px;
+                         height: 20px;
+                         padding: 12px;
+                         object-fit: cover;
+                    }
+
+                    input{
+                         width: 100%;
+                         padding: 10px;
+                         border: 0;
+                         outline: none;
+                         font-size: 16px;
+                    }
+
+                    button{
+                         border: 0;
+                         font-size: 18px;
+                         padding: 11px 20px;
+                         background: #1fc578;
+                         font-weight: 500;
+                         color: white;
+                         transition: .5s;
+                         cursor: pointer;
+                         &:hover{
+                              background: #404145;
+                         }
+                    }
+               }
+               .keyword{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    button{
+                         border: 1px solid white;
+                         background: transparent;
+                         color: white;
+                         font-size: 14px;
+                         padding: 5px 10px;
+                         border-radius: 50px;
+                         cursor: pointer;
+                         transition: .5s;
+                         &:hover{
+                              background: white;
+                              color: #404145;
+                         }
+                    }
+               }
+
+          }
+          .right{
+               
+               img{
+                    
+                    object-fit: contain;
+
+               }
+          }
+     }
+}

@@ -7,6 +7,7 @@
   transition: 0.5s all ease;
   position: sticky;
   top: 0;
+  z-index: 999;
   &.active {
     background: white;
     color: #404145;
@@ -23,8 +24,12 @@
     padding: 20px 0;
     .logo {
       .logo-text {
-        font-weight: 600;
+        font-weight: 800;
         font-size: 34px;
+
+        span.dot{
+          color: #19a463;
+        }
       }
     }
     .links {
@@ -34,17 +39,14 @@
       font-weight: 600;
 
       button {
-        color: white;
+        color: #1fc578;
         padding: 10px 20px;
         cursor: pointer;
         background: transparent;
-        border: 1px solid white;
+        border: 2px solid #1fc578;
         border-radius: 5px;
         font-weight: bold;
-        &:hover {
-          background: #19a463;
-          border: 1px solid #19a463;
-        }
+       
       }
 
       .user {
@@ -93,6 +95,11 @@
     span {
       color: #404145;
       font-weight: 500;
+      transition: .3s;
+      &:hover{
+        color: #19a463;
+        font-weight: bold;
+      }
     }
   }
 }
